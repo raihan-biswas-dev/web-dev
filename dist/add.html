@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Add Product</title>
+    <link href="./styles/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/fontawesome.min.css">
+    <link href="./styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">SHOP 101</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="py-5 bg-dark">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <img src="./img/eca6fb86-0967-4ab1-bfd0-22081400a017_1.8f5441012ae12116eb343da1c22f6ddf.jpeg" alt="Descriptive Image" class="img-fluid rounded">
+            <p class="text-white mt-3">
+              This section features the product image and a brief description.
+            </p>
+          </div>
+
+          
+          <div class="col-md-6 bg-light shadow-lg rounded p-5">
+            <div id="app"></div>
+
+            <h1 id="formHeading" class="mb-4">Add Product</h1>
+            <div id="message" class="alert" style="display: none"></div>
+            <form id="productForm" novalidate>
+              <div class="form-group mb-3">
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+                <div class="invalid-feedback">Product name is required</div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="productPrice">Price ($)</label>
+                <input type="number" class="form-control" id="productPrice" step="0.01" placeholder="Enter price" required>
+                <div class="invalid-feedback">Please enter a valid price</div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="productStock">Stock</label>
+                <input type="number" class="form-control" id="productStock" placeholder="Enter stock quantity" required>
+                <div class="invalid-feedback">
+                  Please enter a valid stock number
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="productDescription">Description</label>
+                <textarea class="form-control" id="productDescription" rows="3" placeholder="Product description" required></textarea>
+                <div class="invalid-feedback">
+                  Product description is required
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="successMessage" class="alert alert-success mt-3 d-none">
+              Product added successfully
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="mainfooter" class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Your Website 2023
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/add.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  <script defer src="js/main.ed9f4d4d06b14d5f544f.js?fb813964113fde37ade6"></script></body>
+</html>
